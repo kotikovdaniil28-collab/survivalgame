@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Игра на выживание | BLACK RUSSIA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./">
+        <span class="brand-mark">BR</span>
+        <span class="brand-text"><b>BLACK</b> RUSSIA</span>
+      </a>
+      <nav class="top-actions">
+        <a class="ghost-link" href="?admin=1">Панель ведущего</a>
+      </nav>
+    </header>
+
+    <main id="app"></main>
+  </div>
+
+  <template id="home-template">
+    <section class="hero-card">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Discord event • browser game</div>
+        <h1>Игра на <span>выживание</span></h1>
+        <p class="hero-lead">Отвечайте на вопросы, проходите мини-испытания и останьтесь последним живым игроком.</p>
+        <div class="home-join">
+          <input id="home-code" maxlength="12" placeholder="Введите invite-код" />
+          <button id="home-join-btn" class="primary-btn">Войти</button>
+        </div>
+        <div class="hero-pills">
+          <span>Вопросы на логику</span>
+          <span>Мини-игры</span>
+          <span>Выбывание</span>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="admin-template">
+    <section class="admin-layout">
+      <aside class="side-panel glass">
+        <div class="panel-title">Панель ведущего</div>
+        <p class="muted">Создание игр доступно только владельцу: <b>daniiltimosin72@gmail.com</b></p>
+        <div id="auth-box"></div>
+      </aside>
+      <section class="main-panel glass" id="admin-main"></section>
+    </section>
+  </template>
+
+  <template id="player-template">
+    <section class="player-layout">
+      <div class="game-header glass" id="player-header"></div>
+      <div class="game-stage glass" id="player-stage"></div>
+      <div class="leaderboard glass" id="player-leaderboard"></div>
+    </section>
+  </template>
+
+  <div id="toast-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>
