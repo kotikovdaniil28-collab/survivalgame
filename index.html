@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Игра на выживание | BLACK RUSSIA</title>
+  <meta name="theme-color" content="#070707" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Браузерная игра на выживание: вопросы, мини-игры, жизни, спецраунды и один победитель." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="./" aria-label="BLACK RUSSIA Survival">
+      <span class="brand-mark logo-mark"><img src="assets/br-logo.png" alt="" /></span>
+      <span class="brand-text"><b>BLACK</b> RUSSIA</span>
+    </a>
+    <nav class="top-nav" id="top-nav">
+      <a href="#rules">Правила</a>
+      <a href="#join">Войти в игру</a>
+    </nav>
+    <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Звук">🔊</button>
+  </header>
+
+  <main id="app"></main>
+
+  <div id="toast-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>
